@@ -1,3 +1,8 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
 body
 {
     background: $background;
@@ -7,15 +12,14 @@ body
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 0;
 }
 
 .main
 {
-    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: 80px;
 
     @media (max-width: 1440px)
     {
@@ -40,5 +44,11 @@ body
 
 section
 {
-    margin-bottom: 250px;
+    margin-bottom: 100px;
+    scroll-margin-top: 80px;
+
+    @media (max-width: 500px)
+    {
+        margin-bottom: 50px;
+    }
 }

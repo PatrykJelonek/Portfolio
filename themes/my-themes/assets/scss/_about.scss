@@ -1,10 +1,39 @@
 .about
 {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 50px;
+    grid-template-areas:
+    "header header" "about .";
+
+    @media (max-width: 1300px)
+    {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "header header header" "about about .";
+    }
+
+    @media (max-width: 915px)
+    {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "header" "about";
+    }
+
+    &__header
+    {
+        grid-area: header;
+    }
 
     &__paragraphs
     {
         grid-area: about;
-        max-width: 50%;
+    }
+
+    &__paragraph
+    {
+        &:first-child
+        {
+            margin-top: 0;
+        }
     }
 }

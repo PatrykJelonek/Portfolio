@@ -4,9 +4,11 @@
     height: 80px;
     position: fixed;
     display: flex;
+    justify-content: center;
     align-items: center;
     background: $background;
     top: 0;
+    z-index: 3;
 
     .container
     {
@@ -32,6 +34,16 @@
         }
     }
 
+    &__logo
+    {
+        transition: color 0.3s ease-in-out;
+
+        &:hover
+        {
+            color: $secondary-color;
+        }
+    }
+
     .nav
     {
         list-style-type: none;
@@ -39,8 +51,9 @@
 
         &__item
         {
-            font-size: 16px;
+            font-size: 14px;
             margin-right: 25px;
+            transition: color 0.3s ease-in-out;
 
             &:last-child
             {
@@ -50,6 +63,16 @@
             &:hover
             {
                 cursor: pointer;
+            }
+        }
+
+        &__link
+        {
+            transition: color 0.3s ease-in-out;
+
+            &:hover
+            {
+                color: $secondary-color;
             }
         }
     }

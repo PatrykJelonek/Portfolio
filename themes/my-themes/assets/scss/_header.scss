@@ -1,0 +1,26 @@
+.site-header
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-subtitle
+{
+    position: relative;
+    z-index: 2;
+
+    &::after
+    {
+        content:"";
+        width: 70%;
+        height: 30px;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        bottom: 3px;
+        right: -20px;
+        background: $secondary-color;
+    }
+}

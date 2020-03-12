@@ -1,0 +1,120 @@
+.technologies
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 100px;
+    grid-template-areas:
+    "header categories categories";
+
+    @media (max-width: 915px)
+    {
+        grid-column-gap: 50px;
+    }
+
+    @media (max-width: 840px)
+    {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "header" "categories";
+    }
+
+    .header
+    {
+        grid-area: header;
+
+        &__title
+        {
+            grid-area: header_title;
+        }
+
+        &__content
+        {
+            grid-area: header_content;
+        }
+    }
+
+    .categories
+    {
+        margin-top: 138px;
+        grid-area: categories;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 50px;
+        grid-template-rows: auto;
+
+        @media (max-width: 1330px)
+        {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        @media (max-width: 840px)
+        {
+            margin-top: 10px;
+        }
+    }
+
+    .category
+    {
+        &__icon
+        {
+            &::before
+            {
+                font-family: "FontAwesome";
+                content: "";
+                margin-right: 15px;
+            }
+
+            &--backend::before
+            {
+                content:"\f233";
+            }
+
+            &--frontend::before
+            {
+                content:"\f108";
+            }
+
+            &--databases::before
+            {
+                content:"\f1c0";
+            }
+        }
+
+        &__description
+        {
+            margin-left: 46px;
+
+            @media (max-width: 840px)
+            {
+                margin-left: 0px;
+            }
+        }
+    }
+
+    .technologies-list
+    {
+        margin-left: 6px;
+        list-style-type: none;
+        display: flex;
+
+        &__item
+        {
+            border: 1px solid $secondary-color;
+            color: $secondary-color;
+            border-radius: 5px;
+            padding: 3px 10px;
+            font-size: 12px;
+            margin-right: 10px;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        @media (max-width: 840px)
+        {
+            margin-left: 0px;
+            padding: 0px;
+        }
+    }
+}
+
+
+

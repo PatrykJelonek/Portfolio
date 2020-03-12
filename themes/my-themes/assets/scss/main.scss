@@ -1,10 +1,6 @@
-$base-color: #212121;
-$text-color: white;
-$border-dark: rgba($base-color, 0.88);
-
-body
-{
-    background: $base-color;
-    color: $text-color;
-    font-size: 12px;
-}
+@import 'colors';
+@import 'base';
+@import 'fonts';
+@import 'about';
+@import 'nav';
+@import 'technologies';

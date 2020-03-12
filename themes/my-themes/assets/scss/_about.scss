@@ -1,0 +1,10 @@
+.about
+{
+    display: grid;
+
+    &__paragraphs
+    {
+        grid-area: about;
+        max-width: 50%;
+    }
+}

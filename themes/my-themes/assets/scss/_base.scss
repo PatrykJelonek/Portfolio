@@ -1,0 +1,44 @@
+body
+{
+    background: $background;
+    color: $primary-color;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 80px;
+
+    @media (max-width: 1440px)
+    {
+        padding: 0px 50px;
+    }
+
+    @media (max-width: 700px)
+    {
+        padding: 0px 25px;
+    }
+
+    @media (max-width: 400px)
+    {
+        padding: 0px 10px;
+    }
+}
+
+.container
+{
+    max-width: 1440px;
+}
+
+section
+{
+    margin-bottom: 250px;
+}

@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{ $style := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify }}
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono:700&display=swap&subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="{{ $style.Permalink }}">
     <title>Patryk Jelonek - Portfolio</title>
 </head>
 <body>
-    Top
-    {{ block "main" . }}
-
-    {{end}}
-    Bottom aaas
-
-    {{ block "arr" . }}
-
-    {{ end }}
+    <div class="container">
+        {{ partial "header/index.html" . }}
+        <main class="main">
+            {{ partial "about/index.html" . }}
+            {{ partial "technologies/index.html" . }}
+        </main>
+    </div>
 </body>
 </html>

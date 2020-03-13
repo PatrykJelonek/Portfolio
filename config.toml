@@ -2,3 +2,7 @@ baseURL = "http://example.org/"
 languageCode = "pl"
 title = "My New Hugo Site"
 theme = "my-themes"
+[taxonomies]
+    tag = "tags"
+    category = "categories"
+    technology = "technologies"

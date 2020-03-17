@@ -14,10 +14,16 @@
     <div class="container">
         {{ partial "header/index.html" . }}
         <main class="main">
-            {{ partial "about/index.html" . }}
-            {{ partial "technologies/index.html" . }}
-            {{ partial "portfolio/index.html" . }}
+            {{ partial "sections/about.html" . }}
+            {{ partial "sections/technologies.html" . }}
+            <!-- {{ partial "sections/portfolio.html" . }} -->
+            {{ partial "sections/contact.html" . }}
         </main>
     </div>
+    {{ partial "footer/index.html" . }}
+
+    {{ $scripts := resources.Get "js/index.js"}}
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="{{ $scripts.Permalink }}"></script>
 </body>
 </html>

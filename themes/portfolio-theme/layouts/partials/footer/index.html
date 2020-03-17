@@ -1,0 +1,59 @@
+<footer class="footer">
+    <div class="container">
+        <section class="column column--menu">
+            <header>
+                <h2 class="column__title">Menu</h2>
+            </header>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#omnie" class="nav__link">O Mnie</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#technologie" class="nav__link">Technologie</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#kontakt" class="nav__link">Kontakt</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#kontakt" class="nav__link">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section class="column column--socialmedia">
+            <header>
+                <h2 class="column__title">Social Media</h2>
+            </header>
+            <ul class="column__list">
+                <li class="column__item">
+                    <span class="column__icon column__icon--github"></span>
+                    <a href="https://github.com/PatrykJelonek" class="column__link">GitHub</a>
+                </li>
+                <li class="column__item">
+                    <span class="column__icon column__icon--facebook"></span>
+                    <a href="https://www.facebook.com/patrykjelonek.blog/" class="column__link">Facebook</a>
+                </li>
+                <li class="column__item">
+                    <span class="column__icon column__icon--linkedin"></span>
+                    <a href="https://www.linkedin.com/in/patryk-jelonek-948420172" class="column__link">LinkedIn</a>
+                </li>
+            </ul>
+        </section>
+        <section class="column column--posts">
+            <header>
+                <h2 class="column__title">Ostatnie posty</h2>
+            </header>
+            <ul class="column__list">
+                {{ range first 5 (where .Site.RegularPages.ByTitle "Section" "blog" ) }}
+                    <li class="column__item">
+                        <a href="{{ .Permalink }}" class="column__link">{{ .Title }}</a>
+                    </li>
+                {{ end }}
+            </ul>
+        </section>
+    </div>
+</footer>

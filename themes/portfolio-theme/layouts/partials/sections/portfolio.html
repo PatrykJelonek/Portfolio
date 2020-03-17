@@ -1,0 +1,27 @@
+<section class="portfolio" id="portfolio">
+    <header class="portfolio__header">
+        <h2 class="portfolio__title">Portfolio</h2>
+    </header>
+    <div class="projects">
+        {{ range (where .Site.RegularPages.ByTitle "Section" "portfolio" ).ByWeight }}
+            <article class="project">
+                <header class="project__header">
+                    <h3 class="project__title">
+                        <a href="{{.Permalink}}" class="project__link">{{ .Title }}</a>
+                    </h3>
+                    <img class="project__img" src="{{.Permalink}}{{ .Params.background_image_path }}" alt="{{ .Params.background_image_alt }}">
+                </header>
+                <!-- <span>
+                    {{ if isset .Params "live" }}
+                        <a href="{{ .Params.live }}" target="_blank">Link to Live</a>
+                    {{ end }}
+                </span>
+                <span>
+                    {{ if isset .Params "github" }}
+                        <a href="{{ .Params.github }}" target="_blank">Link to Github</a>
+                    {{ end }}
+                </span> -->
+            </article>
+        {{ end }}
+    </div>
+</section>
